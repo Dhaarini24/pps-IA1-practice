@@ -1,0 +1,70 @@
+Breakpoint 1, main () at p2original.c:31
+31    a=input();
+(gdb) s
+input () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter a number\n");
+(gdb) n
+enter a number
+6     scanf("%d",&x);
+(gdb) n
+n
+7     return x;
+(gdb) n
+8   }
+(gdb) n
+main () at p2original.c:32
+32    b=input();
+(gdb) s
+input () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter a number\n");
+(gdb) n
+enter a number
+6     scanf("%d",&x);
+(gdb) n
+7     return x;
+(gdb) n
+8   }
+(gdb) n
+main () at p2original.c:33
+33    c=input();
+(gdb) s
+input () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter a number\n");
+(gdb) n
+enter a number
+6     scanf("%d",&x);
+(gdb) n
+7     return x;
+(gdb) n
+8   }
+(gdb) n
+main () at p2original.c:34
+34    largest=cmp(a,b,c);
+(gdb) s
+cmp (a=32630, b=32630, c=32630) at p2original.c:11
+11    if(a>b && a>c)
+(gdb) n
+15    else if(b>c)
+(gdb) n
+21      return c;
+(gdb) n
+23  }
+(gdb) n
+main () at p2original.c:35
+35    output(a,b,c,largest);
+(gdb) s
+output (a=32630, b=32630, c=32630, largest=32630) at p2original.c:26
+26    printf("The largest number is %d",largest);
+(gdb) n
+27  }
+(gdb) n
+main () at p2original.c:36
+36    return 0;
+(gdb) n
+37  }(gdb)
