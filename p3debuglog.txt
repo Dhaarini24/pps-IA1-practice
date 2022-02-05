@@ -1,0 +1,44 @@
+Breakpoint 1, main () at p3original.c:25
+25    n=input_n();
+(gdb) s
+input_n () at p3original.c:3
+3   {
+(gdb) n
+5     printf("enter a number\n");
+(gdb) n
+enter a number
+6     scanf("%d",&n);
+(gdb) n
+n
+7     return n;
+(gdb) n
+8   }
+(gdb) n
+main () at p3original.c:26
+26    sum=sum_n(n);
+(gdb) s
+sum_n (n=32672) at p3original.c:11
+11    int sum=0,i;
+(gdb) n
+12    for(i=1;i<=n;i++)
+(gdb) n
+14      sum +=i;
+(gdb) n
+12    for(i=1;i<=n;i++)
+(gdb) finish
+Run till exit from #0  sum_n (n=32672) at p3original.c:12
+0x00005556d4400835 in main () at p3original.c:26
+26    sum=sum_n(n);
+Value returned is $1 = 533746128
+(gdb) n
+27    output(n,sum);
+(gdb) s
+output (n=32672, sum=533746128) at p3original.c:20
+20    printf("the sum of %d numbers is %d",n,sum);
+(gdb) n
+21  }
+(gdb) n
+main () at p3original.c:28
+28    return 0;
+(gdb) n
+29  }(gdb) 
