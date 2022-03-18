@@ -20,6 +20,7 @@ float my_sqrt(float x)
   }
   return next;
 }
+
 void output(float x,float sqrt_result)
 {
   printf("%f is a sqrt of %f",x,sqrt_result);

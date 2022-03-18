@@ -6,16 +6,15 @@ void input_two_strings(char *a, char *b)
  scanf("%s",a);
  printf("enter the two string :");
  scanf("%s",b);
-
 } 
 
 int strcompare(char *a,char *b)
 {
   int i;
   for(i=0;a[i]==b[i]&& a[i]!='\0';i++);
-  
-  return a[i]-b[i];
-  
+  { 
+    return a[i]-b[i];
+  }
 }
 
 void output(char *a, char *b, int result)

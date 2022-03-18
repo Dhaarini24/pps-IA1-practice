@@ -1,9 +1,12 @@
 #include<stdio.h>
+
 struct _complex
 {
   float real,imaginary;
 };
+
 typedef struct _complex complex;
+
 complex input_complex()
 {
   complex c;
@@ -11,6 +14,7 @@ complex input_complex()
   scanf("%f %f",&c.real,&c.imaginary);
   return c;
 }
+
 complex add(complex a, complex b)
 {
   complex c;
@@ -18,6 +22,7 @@ complex add(complex a, complex b)
   c.imaginary=a.imaginary+b.imaginary;
   return c;
 }
+
 void output(complex a, complex b, complex c)
 {
   printf("(%f+i/%f)+(%f+i%f)is (%f+i%f)\n",a.real,a.imaginary,b.real,b.imaginary,c.real,c.imaginary);
