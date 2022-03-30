@@ -1,0 +1,42 @@
+Breakpoint 1, main () at p5original.c:32
+32    x=input();
+(gdb) s
+input () at p5original.c:5
+5   {
+(gdb) n
+7     printf("enter the number which you want the square root of\n");
+(gdb) n
+enter the number which you want the square root of
+8     scanf("%f",&x);
+(gdb) n
+n
+9     return x;
+(gdb) n
+10  }
+(gdb) n
+main () at p5original.c:33
+33    y=my_sqrt(x);
+(gdb) s
+my_sqrt (x=0) at p5original.c:14
+14    float guess=x/2;
+(gdb) n
+15    float next=x/guess;
+(gdb) n
+16    while(fabs(guess-next)>0.000001)
+(gdb) n
+21    return next;
+(gdb) n
+22  }
+(gdb) n
+main () at p5original.c:34
+34    output(x,y);
+(gdb) s
+output (x=0, sqrt_result=-nan(0x400000)) at p5original.c:26
+26    printf("%f is a sqrt of %f",x,sqrt_result);
+(gdb) n
+27  }
+(gdb) n
+main () at p5original.c:35
+35    return 0;
+(gdb) n
+36  }(gdb) n

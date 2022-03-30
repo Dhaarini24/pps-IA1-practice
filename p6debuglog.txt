@@ -1,0 +1,46 @@
+Breakpoint 1, main () at p6original.c:37
+37  {
+(gdb) n
+41     input_two_strings(a,b);
+(gdb) s
+input_two_strings (a=0x7ffdddd67074 "\366U", b=0x7ffdddd6707e "")
+    at p6original.c:5
+5    printf("enter the two string :");
+(gdb) n
+6    scanf("%s",a);
+(gdb) n
+enter the two string :n
+7    printf("enter the two string :");
+(gdb) n
+8    scanf("%s",b);
+(gdb) n
+enter the two string :n
+9   } 
+(gdb) n
+main () at p6original.c:42
+42     int x= strcompare(a,b);
+(gdb) s
+strcompare (a=0x7ffdddd67074 "n", b=0x7ffdddd6707e "n") at p6original.c:14
+14    for(i=0;a[i]==b[i]&& a[i]!='\0';i++);
+(gdb) n
+16      return a[i]-b[i];
+(gdb) n
+18  }
+(gdb) n
+main () at p6original.c:43
+43     output(a,b,x);
+(gdb) s
+output (a=0x7ffdddd67074 "n", b=0x7ffdddd6707e "n", result=0)
+    at p6original.c:22
+22    if(result>0)
+(gdb) n
+26    else if(result<0)
+(gdb) n
+32      printf("the strings are equal");
+(gdb) n
+34  }
+(gdb) n
+main () at p6original.c:44
+44     return 0;
+(gdb) n
+46  }(gdb) 

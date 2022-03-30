@@ -1,0 +1,80 @@
+Breakpoint 1, main () at p8original.c:48
+48  {
+(gdb) n
+50    n=input_count();
+(gdb) s
+input_count () at p8original.c:8
+8   {
+(gdb) n
+10    printf("enter the n value\n");
+(gdb) n
+enter the n value
+11    scanf("%d",&n);
+(gdb) n
+2
+12    return n;
+(gdb) n
+13  }
+(gdb) n
+main () at p8original.c:51
+51    complex c[n];
+(gdb) n
+53    input_n(n,c);
+(gdb) n
+enter the complex numbers
+2
+3
+enter the complex numbers
+4
+5
+54    sum=add_n_complex(n,c);
+(gdb) s
+add_n_complex (n=2, c=0x7fff468a1cc0) at p8original.c:27
+27    sum.real=0;
+(gdb) n
+28    sum.imaginary=0;
+(gdb) n
+29    for(int i=0;i<n;i++)
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+31      sum.real+=c[i].real;
+(gdb) n
+32      sum.imaginary+=c[i].imaginary;
+(gdb) n
+29    for(int i=0;i<n;i++)
+(gdb) n
+31      sum.real+=c[i].real;
+(gdb) n
+32      sum.imaginary+=c[i].imaginary;
+(gdb) n
+29    for(int i=0;i<n;i++)
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+34    return sum;
+(gdb) n
+35  }
+(gdb) n
+main () at p8original.c:55
+55    output(n,c,sum);
+(gdb) s
+output (n=2, c=0x7fff468a1cc0, sum=...) at p8original.c:39
+39    for(int i=0;i<n-1;i++)
+(gdb) n
+41      printf("(%f+i%f)+\n",c[i].real,c[i].imaginary);
+(gdb) n
+(2.000000+i3.000000)+
+42      printf("(%f+i%f)=(%f+i%f)\n",c[n-1].real,c[n-1].imaginary,sum.real,sum.imaginary);
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+(4.000000+i5.000000)=(6.000000+i8.000000)
+39    for(int i=0;i<n-1;i++)
+(gdb) n
+45  }
+(gdb) n
+main () at p8original.c:56
+56    return 0;
+(gdb) n
+57  }(gdb) 

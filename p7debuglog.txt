@@ -1,0 +1,58 @@
+Breakpoint 1, main () at p7original.c:34
+34    a=input_complex();
+(gdb) s
+input_complex () at p7original.c:11
+11  {
+(gdb) n
+13    printf("enter thr real and imaginary parts of complex number\n");
+(gdb) n
+enter thr real and imaginary parts of complex number
+14    scanf("%f %f",&c.real,&c.imaginary);
+(gdb) n
+n
+15    return c;
+(gdb) n
+16  }
+(gdb) n
+main () at p7original.c:35
+35    b=input_complex();
+(gdb) s
+input_complex () at p7original.c:11
+11  {
+(gdb) n
+13    printf("enter thr real and imaginary parts of complex number\n");
+(gdb) n
+enter thr real and imaginary parts of complex number
+14    scanf("%f %f",&c.real,&c.imaginary);
+(gdb) n
+n
+15    return c;
+(gdb) n
+16  }
+(gdb) n
+main () at p7original.c:36
+36    c= add(a,b);
+(gdb) s
+add (a=..., b=...) at p7original.c:21
+21    c.real=a.real+b.real;
+(gdb) n
+22    c.imaginary=a.imaginary+b.imaginary;
+(gdb) n
+23    return c;
+(gdb) n
+24  }
+(gdb) n
+main () at p7original.c:37
+37    output(a,b,c);
+(gdb) s
+output (a=..., b=..., c=...) at p7original.c:28
+28    printf("(%f+i/%f)+(%f+i%f)is (%f+i%f)\n",a.real,a.imaginary,b.real,b.imaginary,c.real,c.imaginary);
+(gdb) n
+(0.093204+i/0.000000)+(0.093204+i0.000000)is (0.186407+i0.000000)
+29  }
+(gdb) n
+main () at p7original.c:38
+38    return 0;
+(gdb) n
+39  }
+(gdb) 

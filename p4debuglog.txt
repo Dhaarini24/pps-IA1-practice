@@ -1,0 +1,64 @@
+Breakpoint 1, main () at p4original.c:36
+36  {
+(gdb) n
+38    n=input_array_size();
+(gdb) n
+enter the number of inputs
+2
+39    int a[n];
+(gdb) s
+40    input_array( n,a);
+(gdb) s
+input_array (n=2, a=0x7ffceaef5b50) at p4original.c:13
+13    for(int i=0;i<n;i++)
+(gdb) n
+15      printf("enter the inputs\n");
+(gdb) n
+enter the inputs
+16      scanf("%d",&a[i]);
+(gdb) n
+2
+13    for(int i=0;i<n;i++)
+(gdb) n
+15      printf("enter the inputs\n");
+(gdb) n
+enter the inputs
+16      scanf("%d",&a[i]);
+(gdb) n
+3
+13    for(int i=0;i<n;i++)
+(gdb) n
+18  }
+(gdb) n
+main () at p4original.c:41
+41    sum=sum_n_arrays(n,a);
+(gdb) s
+sum_n_arrays (n=2, a=0x7ffceaef5b50) at p4original.c:22
+22    int sum=0;
+(gdb) n
+23    for(int i=0; i<n; i++)
+(gdb) n
+25      sum= sum+a[i];
+(gdb) n
+23    for(int i=0; i<n; i++)
+(gdb) n
+25      sum= sum+a[i];
+(gdb) n
+23    for(int i=0; i<n; i++)
+(gdb) n
+27    return sum;
+(gdb) n
+28  }
+(gdb) n
+main () at p4original.c:42
+42    output(n,a,sum);
+(gdb) s
+output (n=2, a=0x7ffceaef5b50, sum=5) at p4original.c:32
+32    printf("the sum of %d inputs is %d",n,sum);
+(gdb) n
+33  }
+(gdb) n
+main () at p4original.c:43
+43    return 0;
+(gdb) n
+44  }(gdb) 
